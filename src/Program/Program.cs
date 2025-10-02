@@ -1,9 +1,17 @@
-﻿namespace Ucu.Poo.RideShare
+﻿using Library;
+
+namespace Ucu.Poo.RideShare
 {
     class Program
     {
         static void Main(string[] args)
         {
+            CommonDriver driver =
+                new CommonDriver("10", "Minecramovil", "Todo un capo", "Baby", "Driver", "55443317-9");
+            Driver_Repository driverrepository = new Driver_Repository();
+            driverrepository.AddDriver(driver);
+            driverrepository.TweetPhoto("New Driver",@"C:\Users\andre\UCU\Programacion\repos\herencia\src\Program\dan.jpg");
+
             /*
             En éste método deberas mostrar un ejemplo de funcionamiento de tu programa. A continuación te
             planteamos un ejemplo de como hacerlo. Esto no significa que te limites a hacer solamente esto, debes pensar

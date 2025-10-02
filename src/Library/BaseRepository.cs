@@ -5,10 +5,10 @@ namespace Library
 {
     public class BaseRepository
     {
-        public void TweetPhoto()
+        public void TweetPhoto(string post, string path)
         {
             var twitter = new TwitterImage();
-            Console.WriteLine(twitter.PublishToTwitter("Paul se unio al equipo", @"C:\Users\andre\Downloads\paul.jpg"));
+            Console.WriteLine(twitter.PublishToTwitter(post, path));
         }
     }
 }
